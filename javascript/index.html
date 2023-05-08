@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kussin</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      const rootElement = document.getElementById("root");
+      for (let number_current = 0; number_current <= 100; number_current++) {
+        let string_output = "";
+
+        if (number_current % 3 == 0) {
+          // check if current number in the loop is divisibled by 3
+          string_output += "Hello<br/>";
+        }
+
+        if (number_current % 5 == 0) {
+          // check if current number in the loop is divisibled by 5
+          string_output += "World<br/>";
+        }
+
+        const pElement = document.createElement("span");
+        pElement.innerHTML = string_output;
+        rootElement.appendChild(pElement);
+      }
+    </script>
+  </body>
+</html>
